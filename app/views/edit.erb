@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> edit your post</h1>
+    <form action="/posts/<%= @post.id %>" method="post">
+        <input id="hidden" type="hidden" name="_method" value="patch">
+        <label for="name">Blog name: </label>
+        <input type="text" name="name" value=" <%= @post.name %>">
+        <label for="content">Blog content: </label>
+        <input type="text" name="content" value=" <%= @post.content %>">
+        <input type="submit" id="submit">
+    </form>
+    
+</body>
+</html>
